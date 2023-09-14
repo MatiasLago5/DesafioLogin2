@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Productos</title>
+</head>
+<body>
+  <h1>Bienvenido, {{user.name}}!</h1>
+  <h1>Lista de Productos</h1>
+  {{{body}}}
+  <hr>
+  <h2>Productos:</h2>
+  <ul>
+    {{#each products}}
+      <li>
+        <strong>{{this.title}}</strong><br>
+        Descripción: {{this.description}}<br>
+        Precio: ${{this.price}}<br>
+        Stock: {{this.stock}}
+      </li>
+    {{/each}}
+  </ul>
+</body>
+</html>

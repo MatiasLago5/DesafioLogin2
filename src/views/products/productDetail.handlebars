@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{title}}</title>
+</head>
+<body>
+  <h1>{{title}}</h1>
+  <p>Descripción: {{description}}</p>
+  <p>Precio: {{price}}</p>
+  <p>Categoría: {{category}}</p>
+  <form action="/carts/{{cartId}}/products/{{id}}" method="POST">
+    <input type="number" name="quantity" value="1" min="1">
+    <button type="submit">Agregar al carrito</button>
+  </form>
+</body>
+</html>

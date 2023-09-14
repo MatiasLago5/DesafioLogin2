@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Carrito {{cartId}}</title>
+</head>
+<body>
+  <h1>Carrito {{cartId}}</h1>
+  {{#if products.length}}
+    <ul>
+      {{#each products}}
+        <li>{{this.product.title}} (Cantidad: {{this.quantity}})</li>
+      {{/each}}
+    </ul>
+    <a href="/carts/{{cartId}}/checkout">Realizar Compra</a>
+  {{else}}
+    <p>El carrito está vacío.</p>
+  {{/if}}
+</body>
+</html>
